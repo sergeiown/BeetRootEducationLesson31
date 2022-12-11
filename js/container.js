@@ -64,6 +64,21 @@ const userDiscount = normal.discountCalculation(
 alert(userDiscount);
 alert("Let's continue!");
 
+// Numbers sorting
+alert("Please enter several numbers separated by a space...");
+const userNumbers = normal.numbersSorting(
+  prompt(
+    "Enter several numbers separated by a space",
+    "23 -15 234 0 19 -28 234 0 -11 678"
+  )
+);
+alert(`${userNumbers}`);
+alert("Let's continue!");
+
+// Days rotation
+alert("Days of week demonstration...");
+normal.daysRotation(0);
+
 closeTab();
 
 // simply close tab offer

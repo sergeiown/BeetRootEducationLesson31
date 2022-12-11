@@ -28,6 +28,47 @@ function discountCalculation(userAmount) {
   }
 }
 
-function numbersSorting(userNumbers) {}
+function numbersSorting(userNumbers) {
+  let even = 0;
+  let odd = 0;
+  let positive = 0;
+  let negative = 0;
+  let nulls = 0;
+  const array = userNumbers.split(" ");
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 === 0) even++;
+    if (array[i] % 2 !== 0) odd++;
+    if (Math.sign(array[i]) === 1) positive++;
+    if (Math.sign(array[i]) === -1) negative++;
+    if (Math.sign(array[i]) === 0) nulls++;
+  }
+  return `even - ${even};  
+odd - ${odd};  
+positive - ${positive};  
+negative - ${negative};  
+nulls - ${nulls}.`;
+  //   return { even, odd, positive, negative, nulls };
+}
 
-export { reverseString, discountCalculation, numbersSorting };
+function daysRotation(userDay) {
+  let week = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let currentDay = userDay;
+  while (
+    confirm(
+      `The current day is ${week[currentDay]}.  Do you want to see the next day?`
+    )
+  ) {
+    currentDay = (currentDay + 1) % week.length;
+    // return `${week[currentDay]}`;
+  }
+}
+
+export { reverseString, discountCalculation, numbersSorting, daysRotation };
