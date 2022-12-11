@@ -37,15 +37,50 @@ function graduateUserAge(userAge) {
 function displaySymbol(userKey) {
   let resultSymbol = "";
 
-  if (resultSymbol >= 0 && resultSymbol <= 9) {
-  } else {
-    resultSymbol = "you had to enter a number from 0 to 9";
+  switch (Number(userKey)) {
+    case 0:
+      resultSymbol = ")";
+      break;
+    case 1:
+      resultSymbol = "!";
+      break;
+    case 2:
+      resultSymbol = "@";
+      break;
+    case 3:
+      resultSymbol = "#";
+      break;
+    case 4:
+      resultSymbol = "$";
+      break;
+    case 5:
+      resultSymbol = "%";
+      break;
+    case 6:
+      resultSymbol = "^";
+      break;
+    case 7:
+      resultSymbol = "&";
+      break;
+    case 8:
+      resultSymbol = "*";
+      break;
+    case 9:
+      resultSymbol = "(";
+      break;
+    default:
+      resultSymbol = "unknown because you have not pressed the right key";
   }
+
+  // if (resultSymbol >= 0 && resultSymbol <= 9) {
+  // } else {
+  //   resultSymbol = "you had to enter a number from 0 to 9";
+  // }
 
   return resultSymbol;
 }
 
-function addupNumbers(userRangeStart, userRangeEnd) {}
+function sumNumbersRange(userRangeStart, userRangeEnd) {}
 
 function findCommonDivisor(userFirstNumber, userSecondNumber) {}
 
@@ -54,7 +89,7 @@ function findAllDevisors(userNumber) {}
 export {
   graduateUserAge,
   displaySymbol,
-  addupNumbers,
+  sumNumbersRange,
   findCommonDivisor,
   findAllDevisors,
 };
