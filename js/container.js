@@ -8,7 +8,7 @@ alert(
 );
 const userAge = minimum.graduateUserAge(prompt("What is your age?", 100));
 alert(`You are ${userAge}`);
-closeTab();
+alert("Let's continue!");
 
 // symbol determination
 alert(
@@ -18,7 +18,7 @@ const userSymbol = minimum.displaySymbol(
   prompt("Type number key from 0 to 9...", 1)
 );
 alert(`The symbol you are looking for is " ${userSymbol} "`);
-closeTab();
+alert("Let's continue!");
 
 // a range of numbers addition
 alert(
@@ -34,8 +34,10 @@ closeTab();
 // simply close tab offer
 function closeTab() {
   if (confirm("Do you want to quit?")) {
+    alert("Goodbye!");
     window.close();
   } else {
-    alert("Let's continue!");
+    alert("Goodbye anyway!!!");
+    window.close();
   }
 }

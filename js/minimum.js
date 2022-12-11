@@ -80,7 +80,19 @@ function displaySymbol(userKey) {
   return resultSymbol;
 }
 
-function sumNumbersRange(userRangeStart, userRangeEnd) {}
+function sumNumbersRange(userRangeStart, userRangeEnd) {
+  let resultSum = Number(userRangeStart);
+
+  while (userRangeStart < userRangeEnd) {
+    userRangeStart++;
+
+    if (userRangeStart <= userRangeEnd) {
+      resultSum += userRangeStart;
+    }
+  }
+
+  return resultSum;
+}
 
 function findCommonDivisor(userFirstNumber, userSecondNumber) {}
 
