@@ -1,5 +1,5 @@
 import * as minimum from "./minimum.js";
-// import * as normal from "./normal.js";
+import * as normal from "./normal.js";
 // import * as maximum from "./maximum.js";
 
 // age determination
@@ -49,6 +49,17 @@ const userDivisorsArray = minimum.findAllDivisors(
 );
 alert(`The divisors are: ${userDivisorsArray}`);
 alert("Let's continue!");
+
+// Palindrome determination
+alert(
+  "Enter any number or string, and we will determine whether it is a palindrome..."
+);
+const userPalindrome = normal.reverseString(
+  prompt("Enter any number or string", "qwertyytrewq")
+);
+alert(`This is ${userPalindrome}`);
+alert("Let's continue!");
+
 closeTab();
 
 // simply close tab offer
