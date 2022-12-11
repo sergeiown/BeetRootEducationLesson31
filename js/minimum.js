@@ -110,12 +110,23 @@ function findCommonDivisor(userFirstNumber, userSecondNumber) {
   }
 }
 
-function findAllDevisors(userNumber) {}
+function findAllDivisors(userNumber) {
+  let arr = [];
+  let i = 1;
+  while (i <= userNumber) {
+    if (userNumber % i === 0) {
+      arr.push(`  ${i}  `);
+    }
+    i += 1;
+  }
+  return arr;
+  // had no need to use try-catch because no any error on NAN or 0 user input
+}
 
 export {
   graduateUserAge,
   displaySymbol,
   sumNumbersRange,
   findCommonDivisor,
-  findAllDevisors,
+  findAllDivisors,
 };

@@ -32,14 +32,22 @@ import * as minimum from "./minimum.js";
 // alert("Let's continue!");
 
 // the greatest common divisor calculation
-alert(
-  "Enter two numbers, and we'll calculate their greatest common divisor..."
+// alert(
+//   "Enter two numbers, and we'll calculate their greatest common divisor..."
+// );
+// const userDivisor = minimum.findCommonDivisor(
+//   prompt("Enter the first number...", 2),
+//   prompt("Enter the second number...", 4)
+// );
+// alert(`The greatest common divisor is " ${userDivisor} "`);
+// alert("Let's continue!");
+
+alert("Input a number different from zero and we'll show all divisors...");
+const userDivisorsArray = minimum.findAllDivisors(
+  prompt("Input a number different from zero", 5)
 );
-const userDivisor = minimum.findCommonDivisor(
-  prompt("Enter the first number...", 2),
-  prompt("Enter the second number...", 4)
-);
-alert(`The greatest common divisor is " ${userDivisor} "`);
+alert(`The divisors are: ${userDivisorsArray}`);
+alert("Let's continue!");
 closeTab();
 
 // simply close tab offer
