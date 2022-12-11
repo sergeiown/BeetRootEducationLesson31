@@ -94,7 +94,21 @@ function sumNumbersRange(userRangeStart, userRangeEnd) {
   return resultSum;
 }
 
-function findCommonDivisor(userFirstNumber, userSecondNumber) {}
+function findCommonDivisor(userFirstNumber, userSecondNumber) {
+  if (userSecondNumber === 0) {
+    return userFirstNumber;
+  } else if (
+    userFirstNumber instanceof Number &&
+    userSecondNumber instanceof Number
+  ) {
+    return "unknown because you have not entered two numbers";
+  } else {
+    return findCommonDivisor(
+      userSecondNumber,
+      userFirstNumber % userSecondNumber
+    );
+  }
+}
 
 function findAllDevisors(userNumber) {}
 
