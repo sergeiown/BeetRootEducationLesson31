@@ -95,18 +95,18 @@ function sumNumbersRange(userRangeStart, userRangeEnd) {
 }
 
 function findCommonDivisor(userFirstNumber, userSecondNumber) {
-  if (userSecondNumber === 0) {
-    return userFirstNumber;
-  } else if (
-    userFirstNumber instanceof Number &&
-    userSecondNumber instanceof Number
-  ) {
+  try {
+    // had to use try-catch due to a stack overflow error on NAN user input
+    if (userSecondNumber === 0) {
+      return userFirstNumber;
+    } else {
+      return findCommonDivisor(
+        userSecondNumber,
+        userFirstNumber % userSecondNumber
+      );
+    }
+  } catch (err) {
     return "unknown because you have not entered two numbers";
-  } else {
-    return findCommonDivisor(
-      userSecondNumber,
-      userFirstNumber % userSecondNumber
-    );
   }
 }
 
