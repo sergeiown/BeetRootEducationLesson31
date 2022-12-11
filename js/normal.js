@@ -42,11 +42,15 @@ function numbersSorting(userNumbers) {
     if (Math.sign(array[i]) === -1) negative++;
     if (Math.sign(array[i]) === 0) nulls++;
   }
-  return `even - ${even};  
-odd - ${odd};  
-positive - ${positive};  
-negative - ${negative};  
-nulls - ${nulls}.`;
+  return `even - ${even};
+  
+  odd - ${odd};
+  
+  positive - ${positive};
+  
+  negative - ${negative};
+  
+  nulls - ${nulls}.`;
   //   return { even, odd, positive, negative, nulls };
 }
 
@@ -63,7 +67,9 @@ function daysRotation(userDay) {
   let currentDay = userDay;
   while (
     confirm(
-      `The current day is ${week[currentDay]}.  Do you want to see the next day?`
+      `The current day is ${week[currentDay]}.
+      
+      Do you want to see the next day?`
     )
   ) {
     currentDay = (currentDay + 1) % week.length;

@@ -77,7 +77,7 @@ alert("Let's continue!");
 
 // Days rotation
 alert("Days of week demonstration...");
-normal.daysRotation(0);
+normal.daysRotation("0");
 
 closeTab();
 
