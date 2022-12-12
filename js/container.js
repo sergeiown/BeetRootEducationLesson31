@@ -1,6 +1,6 @@
 import * as minimum from "./minimum.js";
 import * as normal from "./normal.js";
-// import * as maximum from "./maximum.js";
+import * as maximum from "./maximum.js";
 
 // age determination
 alert("You will be asked to input your age and we'll determine who you are...");
@@ -10,7 +10,7 @@ alert("Let's continue!");
 
 // symbol determination
 alert(
-  "Press number key from 0 to 9 and we show you symbol which is situated at the top of a number key..."
+  "Press number key from 0 to 9 and we'll show you symbol which is situated at the top of a number key..."
 );
 const userSymbol = minimum.displaySymbol(
   prompt("Type number key from 0 to 9...", 1)
@@ -78,6 +78,11 @@ alert("Let's continue!");
 // Days rotation
 alert("Days of week demonstration...");
 normal.daysRotation("0");
+alert("Let's continue!");
+
+// Number guessing game
+alert("Guess a number from 0 to 100 and we'll guess it...");
+maximum.guessNumber();
 
 closeTab();
 
