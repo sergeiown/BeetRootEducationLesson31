@@ -83,6 +83,11 @@ alert("Let's continue!");
 // Number guessing game
 alert("Guess a number from 0 to 100 and we'll guess it...");
 maximum.guessNumber();
+alert("Let's continue!");
+
+// Multiplication table
+alert("Now we shall bild a multiplication table from 1 to 10...");
+alert(maximum.multiplicationTableBuilder());
 
 closeTab();
 
