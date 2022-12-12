@@ -18,6 +18,4 @@ function guessNumber(min = 0, max = 100) {
   search();
 }
 
-console.log(guessNumber());
-
 export { guessNumber };
