@@ -33,4 +33,28 @@ function multiplicationTableBuilder(min = 1, max = 10) {
   return arr;
 }
 
-export { guessNumber, multiplicationTableBuilder };
+function dateCalculation(year = "2022", month = "12", day = "12", add = "1") {
+  year = Number(year);
+  month = Number(month) - 1;
+  day = Number(day);
+  add = Number(add);
+
+  let userDate = new Date(year, month, day);
+  userDate.setDate(userDate.getDate() + add);
+
+  const dateOptions = {
+    era: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    weekday: "long",
+    timezone: "UTC",
+    hour: "numeric",
+    minute: "numeric",
+    second: "numeric",
+  };
+
+  return userDate.toLocaleString("en-us", dateOptions);
+}
+
+export { guessNumber, multiplicationTableBuilder, dateCalculation };

@@ -88,7 +88,16 @@ alert("Let's continue!");
 // Multiplication table
 alert("Now we shall bild a multiplication table from 1 to 10...");
 alert(maximum.multiplicationTableBuilder());
+alert("And the next will be the final script!");
 
+// Date calculation
+const userDateChoice = maximum.dateCalculation(
+  prompt("Enter year", "2022"),
+  prompt("Enter month", "12"),
+  prompt("Enter day", "12"),
+  prompt("Enter number of days you want to add to your date", "1")
+);
+alert(`It will be: ${userDateChoice}`);
 closeTab();
 
 // simply close tab offer
